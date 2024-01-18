@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+    <script src="/canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <script src="/app.js"></script>
+
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+
+        <div id="can-1" class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <br>
+                    <form action="users" method="post">
+                        <input type="text" id="name" name="name" placeholder="Enter Name" />
+                        <input type="password" id="password" name="password" placeholder="Enter Password" />
+                        <button id="singIn" class="btn btn-default" type="button">SignIn</button>
+                        <div id="err-sign">
+                            <label for="name"></label>
+                        </div>
+                        <button id="singUp" class="btn btn-default" type="button">SignUp</button>
+                        <p></p>
+                    </form>
+
+                    </br>
+                    <button id="join" class="btn btn-default" type="button">Join</button>
+                    <p></p>
+                    <div id="for-canvas" class="canvas-battle-field">
+                        <canvas id="battle-field" width="850" height="600" style="display: block"></canvas>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
